@@ -1,10 +1,8 @@
 #include "Scene.hpp"
 
 Scene::PlacedObject::PlacedObject(GameObject* obj, Coord coord)
-	:obj_(obj),
-	coord_(coord)
-{
-}
+	:obj_(obj), coord_(coord)
+{}
 
 
 
@@ -60,13 +58,28 @@ void Scene::Add(GameObject* obj, Coord coord)
 
 int Scene::Find(Coord place_object) const
 {
-	return 0;
+	int result{};
+	for (auto& el : placed_)
+	{
+		if (el.Where() == place_object)
+		{
+			return result;
+		}
+		result++;
+	}
+	return -1;
 }
 
 
 
 void Scene::Remove(int index)
 {
+	auto victim = placed_.begin();
+	for (size_t i = 0; i < index; i++)
+	{
+		++victim;
+	}
+	placed_.erase(victim);
 }
 
 
@@ -74,7 +87,7 @@ void Scene::Remove(int index)
 Scene::PlacedObject& Scene::operator[](int i)
 {
 	auto el = placed_.begin();
-	for (int k = 0; k < i; k++)
+	for (size_t k = 0; k < i; k++)
 	{
 		++el;
 	}

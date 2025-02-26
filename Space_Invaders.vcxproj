@@ -127,14 +127,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Scene.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Action.hpp" />
     <ClInclude Include="Controller.hpp" />
     <ClInclude Include="Coord.hpp" />
     <ClInclude Include="Game.hpp" />
     <ClInclude Include="GameObject.hpp" />
+    <ClInclude Include="Player.hpp" />
     <ClInclude Include="Scene.hpp" />
     <ClInclude Include="Status.hpp" />
   </ItemGroup>

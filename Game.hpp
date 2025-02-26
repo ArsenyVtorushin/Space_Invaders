@@ -2,6 +2,7 @@
 #define GAME_HPP
 
 #include "Scene.hpp"
+#include "Action.hpp"
 
 class Game
 {
@@ -14,6 +15,7 @@ public:
 	void Shutdown();
 
 private:
+	bool is_win();
 	Scene scene;
 };
 

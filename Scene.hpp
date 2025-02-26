@@ -5,6 +5,8 @@
 #include "GameObject.hpp"
 #include "Coord.hpp"
 
+// еще одна халявная оценка 
+// за сегодня надо сделать сцену
 class Scene
 {
 	class PlacedObject;

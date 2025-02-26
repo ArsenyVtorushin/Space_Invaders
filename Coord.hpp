@@ -6,6 +6,8 @@
 // library of traits of different types
 // via this lib you're able to understand what a type can do and what it can't
 
+//
+
 class Coord
 {
 public:
